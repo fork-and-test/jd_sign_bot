@@ -1,10 +1,11 @@
-name: Github JD-sign bot 
+name: Github JD-sign bot
 
 on:
     push:
         branches:
             - master
     schedule:
+        #国际标准时间16:05,北京时间0：05
         - cron: '5 16 * * *'
 jobs:
     build:
