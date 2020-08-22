@@ -5,8 +5,8 @@ on:
         branches:
             - master
     schedule:
-        #国际标准时间16:05,北京时间0：05
-        - cron: '5 16 * * *'
+        #0：30
+        - cron: '30 0 * * *'
 jobs:
     build:
         runs-on: ubuntu-latest
