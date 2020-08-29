@@ -50,18 +50,18 @@ async function start() {
   console.log('替换变量完毕')
   // 执行
   await exec("node JD_DailyBonus.js >> result");
-  console.log(result)
   console.log('执行完毕')
 
-  if (serverJ) {
+  //if (serverJ) {
     const path = "./result";
     let content = "";
     if (fs.existsSync(path)) {
       content = fs.readFileSync(path, "utf8");
     }
-    await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
+     console.log(content)
+    //await sendNotify("京东签到-" + new Date().toLocaleDateString(), content);
     console.log('发送结果完毕')
-  }
+  //}
 }
 
 start()
